@@ -6,7 +6,9 @@ import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -15,11 +17,7 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     @Override
-    public void start(Stage stage) throws IOException {
-        var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
-        
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+    public void start(Stage stage) {
 
         URL url = App.class.getResource("view/test.fxml");
         FXMLLoader loader = new FXMLLoader();
